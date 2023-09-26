@@ -11,7 +11,7 @@ export default function DataRow({conta}) {
             <div className="flex items-center">
                 <span>R$ 100.00</span>
                 <div className="invisible group-hover:visible">
-                    <DropMenu />
+                    <DropMenu contaId={conta.id} />
                 </div>
             </div>
         </div>
