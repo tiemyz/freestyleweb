@@ -6,6 +6,7 @@ import { getContas } from "@/actions/contas";
 
 export default async function Contas() {
   const contas = await getContas()
+
   return (
     <>
       <NavBar active={"contas"} />
@@ -20,7 +21,7 @@ export default async function Contas() {
         </div>
 
         <div id="data">
-          {contas.map(conta => <DataRow key={conta.id} conta={conta} />)}
+          {contas?.map(conta => <DataRow key={conta.id} conta={conta} />)}        
         </div>
       </main>
     </>
